@@ -17,10 +17,12 @@ const NoteCard = ({ data, refetch }) => {
   };
   return (
     <>
-      <div className="note-card group px-4 py-3 rounded-xl flex-1 bg-[#311b50] border border-purple-600  transform transition-transform duration-300 hover:scale-101 hover:shadow-lg shadow-purple-700 min-w-3xs">
-        <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold">{data.title}</h2>
-          <div className="flex gap-3 opacity-0 group-hover:opacity-100">
+      <div className="note-card group px-4 py-3 rounded-xl flex-1 bg-[#311b50] border border-purple-600  transform transition-transform duration-300 hover:scale-101 hover:shadow-lg shadow-purple-700 min-w-xl min-h-80">
+        <div className="flex justify-between items-center gap-3">
+          <h2 className="text-2xl font-bold break-words whitespace-normal">
+            {data.title}
+          </h2>
+          <div className="flex gap-3 opacity-0 group-hover:opacity-100 min-w-7">
             <div
               onClick={() => setShowModal(true)}
               className="cursor-pointer p-2 hover:bg-blue-700 rounded-xl"

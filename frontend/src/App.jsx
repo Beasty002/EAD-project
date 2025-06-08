@@ -26,7 +26,7 @@ const App = () => {
     fetchData();
   }, []);
   return (
-    <div className="h-screen flex flex-col gap-8 bg-gradient-to-br  from-gray-900  via-purple-900  to-indigo-900 transition-all duration-500">
+    <div className="h-screen flex flex-col gap-8 bg-gradient-to-br  from-gray-900  via-purple-900  to-indigo-900 transition-all duration-500 overflow-auto pb-4">
       <NavBar />
 
       <main className="px-2 md:px-20 z-40 flex-1">
@@ -45,7 +45,7 @@ const App = () => {
             <span>+</span> New Note
           </button>
         </div>
-        <div className="mt-4 flex gap-2 flex-wrap">
+        <div className="mt-4 flex gap-4 flex-wrap">
           {filteredNotes?.map((item, index) => (
             <NoteCard data={item} key={index} refetch={fetchData} />
           ))}
