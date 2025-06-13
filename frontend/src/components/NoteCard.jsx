@@ -7,7 +7,9 @@ const NoteCard = ({ data, refetch }) => {
   const [showModal, setShowModal] = useState(false);
   const handleDelte = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/notes/${id}`);
+      const res = await axios.delete(
+        `https://backend-80iz.onrender.com/api/notes/${id}`
+      );
       console.log(res);
       refetch();
       toast.success("Successfully Delted Note");

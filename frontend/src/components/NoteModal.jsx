@@ -14,7 +14,7 @@ const NoteModal = ({ data = null, onClose, refetch }) => {
     try {
       if (data) {
         const res = await axios.put(
-          `http://localhost:5000/api/notes/${data._id}`,
+          `https://backend-80iz.onrender.com/api/notes/${data._id}`,
           {
             _id: formData.id,
             title: formData.title,
@@ -24,7 +24,7 @@ const NoteModal = ({ data = null, onClose, refetch }) => {
         console.log(res);
         toast.success("Successfully Updated Note");
       } else {
-        await axios.post("http://localhost:5000/api/notes/add", {
+        await axios.post("https://backend-80iz.onrender.com/api/notes/add", {
           title: formData.title,
           description: formData.description,
         });

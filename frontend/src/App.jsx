@@ -12,7 +12,9 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/notes/getAll");
+      const res = await axios.get(
+        "https://backend-80iz.onrender.com/api/notes/getAll"
+      );
       setData(res.data);
       console.log(res.data);
     } catch (error) {
